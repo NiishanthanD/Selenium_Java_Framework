@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-09-23T13:26:07 IST" name="Default suite" finished-at="2026-09-23T13:26:26 IST" duration-ms="19269">
+    <groups>
+    </groups>
+    <test started-at="2026-09-23T13:26:07 IST" name="Default test" finished-at="2026-09-23T13:26:26 IST" duration-ms="19269">
+      <class name="tests.FirstTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.FirstTest@f0c8a99]" started-at="2026-09-23T13:26:07 IST" name="setUp" finished-at="2026-09-23T13:26:12 IST" duration-ms="5362" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="loginTest()[pri:0, instance:tests.FirstTest@f0c8a99]" started-at="2026-09-23T13:26:12 IST" name="loginTest" finished-at="2026-09-23T13:26:13 IST" duration-ms="550" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.FirstTest@f0c8a99]" started-at="2026-09-23T13:26:13 IST" name="tearDown" finished-at="2026-09-23T13:26:13 IST" duration-ms="486" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.FirstTest -->
+      <class name="tests.SeleniumActionsPractice">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.SeleniumActionsPractice@742ff096]" started-at="2026-09-23T13:26:13 IST" name="setUp" finished-at="2026-09-23T13:26:15 IST" duration-ms="2147" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="seleniumActionsPractice()[pri:0, instance:tests.SeleniumActionsPractice@742ff096]" started-at="2026-09-23T13:26:15 IST" name="seleniumActionsPractice" finished-at="2026-09-23T13:26:16 IST" duration-ms="787" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- seleniumActionsPractice -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.SeleniumActionsPractice@742ff096]" started-at="2026-09-23T13:26:16 IST" name="tearDown" finished-at="2026-09-23T13:26:17 IST" duration-ms="337" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.SeleniumActionsPractice -->
+      <class name="tests.StreamPractice">
+        <test-method signature="streamExample()[pri:0, instance:tests.StreamPractice@75437611]" started-at="2026-09-23T13:26:17 IST" name="streamExample" finished-at="2026-09-23T13:26:17 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- streamExample -->
+      </class> <!-- tests.StreamPractice -->
+      <class name="tests.HashMapPractice">
+        <test-method signature="hashMapExample()[pri:0, instance:tests.HashMapPractice@1c5920df]" started-at="2026-09-23T13:26:20 IST" name="hashMapExample" finished-at="2026-09-23T13:26:20 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hashMapExample -->
+      </class> <!-- tests.HashMapPractice -->
+      <class name="tests.WaitPractice">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.WaitPractice@350aac89]" started-at="2026-09-23T13:26:17 IST" name="setUp" finished-at="2026-09-23T13:26:19 IST" duration-ms="2421" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="explicitWaitExample()[pri:0, instance:tests.WaitPractice@350aac89]" started-at="2026-09-23T13:26:19 IST" name="explicitWaitExample" finished-at="2026-09-23T13:26:19 IST" duration-ms="493" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- explicitWaitExample -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.WaitPractice@350aac89]" started-at="2026-09-23T13:26:19 IST" name="tearDown" finished-at="2026-09-23T13:26:20 IST" duration-ms="332" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.WaitPractice -->
+      <class name="tests.XPathPractice">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.XPathPractice@15043a2f]" started-at="2026-09-23T13:26:23 IST" name="setUp" finished-at="2026-09-23T13:26:25 IST" duration-ms="1885" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="xpathPractice()[pri:0, instance:tests.XPathPractice@15043a2f]" started-at="2026-09-23T13:26:25 IST" name="xpathPractice" finished-at="2026-09-23T13:26:26 IST" duration-ms="789" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- xpathPractice -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.XPathPractice@15043a2f]" started-at="2026-09-23T13:26:26 IST" name="tearDown" finished-at="2026-09-23T13:26:26 IST" duration-ms="326" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.XPathPractice -->
+      <class name="tests.ProductTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.ProductTest@17f9d882]" started-at="2026-09-23T13:26:20 IST" name="setUp" finished-at="2026-09-23T13:26:21 IST" duration-ms="1563" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="productTest()[pri:0, instance:tests.ProductTest@17f9d882]" started-at="2026-09-23T13:26:21 IST" name="productTest" finished-at="2026-09-23T13:26:23 IST" duration-ms="1201" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.ProductTest@17f9d882]" started-at="2026-09-23T13:26:23 IST" name="tearDown" finished-at="2026-09-23T13:26:23 IST" duration-ms="422" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.ProductTest -->
+      <class name="tests.ArrayListPractice">
+        <test-method signature="arrayListExample()[pri:0, instance:tests.ArrayListPractice@79e4c792]" started-at="2026-09-23T13:26:23 IST" name="arrayListExample" finished-at="2026-09-23T13:26:23 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- arrayListExample -->
+      </class> <!-- tests.ArrayListPractice -->
+      <class name="tests.LambdaPractice">
+        <test-method signature="lambdaExample()[pri:0, instance:tests.LambdaPractice@196a42c3]" started-at="2026-09-23T13:26:23 IST" name="lambdaExample" finished-at="2026-09-23T13:26:23 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lambdaExample -->
+      </class> <!-- tests.LambdaPractice -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
