@@ -5,17 +5,16 @@ import org.testng.annotations.Test;
 
 import base.BaseTest;
 import pages.LoginPage;
+import utils.InvalidLoginException;
 
 public class FirstTest extends BaseTest {
 
     @Test
-    public void loginTest() {
+    public void loginTest() throws InvalidLoginException {
 
         LoginPage loginPage = new LoginPage(driver);
 
-        loginPage.enterUsername("standard_user");
-        loginPage.enterPassword("secret_sauce");
-        loginPage.clickLogin();
+        loginPage.login("standard_user", "secret_sauce");
 
         Assert.assertTrue(driver.getCurrentUrl().contains("inventory"));
     }

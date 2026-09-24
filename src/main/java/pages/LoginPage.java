@@ -7,34 +7,40 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class LoginPage {
+import utils.BasePage;
+import utils.InvalidLoginException;
 
-    WebDriver driver;
-    WebDriverWait wait;
+public class LoginPage extends BasePage {
 
-    By username = By.xpath("//input[@id='user-name']");
-    By password = By.xpath("//input[@id='password']");
-    By loginButton = By.xpath("//input[@id='login-button']");
+    private WebDriverWait wait;
+
+    private By username = By.id("user-name");
+    private By password = By.id("password");
+    private By loginButton = By.id("login-button");
+    private By errorMessage = By.cssSelector("[data-test='error']");
 
     public LoginPage(WebDriver driver) {
-        this.driver = driver;
-        this.wait = new WebDriverWait(
-                driver,
-                Duration.ofSeconds(10));
+        super(driver);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    public void enterUsername(String usernameValue) {
-        wait.until(
-                ExpectedConditions.visibilityOfElementLocated(username)).sendKeys(usernameValue);
-    }
+    public void login(String user, String pass) throws InvalidLoginException {
 
-    public void enterPassword(String passwordValue) {
-        wait.until(
-                ExpectedConditions.visibilityOfElementLocated(password)).sendKeys(passwordValue);
-    }
+        wait.until(ExpectedConditions.visibilityOfElementLocated(username))
+                .sendKeys(user);
 
-    public void clickLogin() {
-        wait.until(
-                ExpectedConditions.elementToBeClickable(loginButton)).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(password))
+                .sendKeys(pass);
+
+        wait.until(ExpectedConditions.elementToBeClickable(loginButton))
+                .click();
+
+        wait.until(ExpectedConditions.or(
+                ExpectedConditions.urlContains("inventory"),
+                ExpectedConditions.visibilityOfElementLocated(errorMessage)));
+
+        if (driver.findElements(errorMessage).size() > 0) {
+            throw new InvalidLoginException("Invalid username or password");
+        }
     }
 }

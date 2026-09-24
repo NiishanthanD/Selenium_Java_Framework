@@ -11,13 +11,9 @@ public class StreamPractice {
     @Test
     public void streamExample() {
 
-        List<String> names = Arrays.asList(
-                "Java", "Selenium", "TestNG", "Maven"
-        );
+        List<String> names = Arrays.asList("Java", "Selenium", "TestNG", "Maven");
 
-        List<String> result = names.stream()
-                .filter(name -> name.length() > 5)
-                .collect(Collectors.toList());
+        List<String> result = names.stream().filter(name -> name.length() > 5).collect(Collectors.toList());
 
         result.forEach(System.out::println);
     }

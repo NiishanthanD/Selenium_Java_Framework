@@ -7,48 +7,41 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import base.BaseTest;
+import pages.LoginPage;
+import utils.InvalidLoginException;
 
 public class SeleniumActionsPractice extends BaseTest {
 
     @Test
-    public void seleniumActionsPractice() {
+    public void seleniumActionsPractice() throws InvalidLoginException {
 
-        driver.findElement(By.id("user-name"))
-                .sendKeys("standard_user");
-
+        // getAttribute
         String placeholder = driver.findElement(By.id("user-name"))
                 .getAttribute("placeholder");
 
         System.out.println("Placeholder: " + placeholder);
 
-        Assert.assertTrue(
-                driver.findElement(By.id("user-name")).isDisplayed());
+        // isDisplayed & isEnabled
+        Assert.assertTrue(driver.findElement(By.id("user-name")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.id("user-name")).isEnabled());
 
-        Assert.assertTrue(
-                driver.findElement(By.id("user-name")).isEnabled());
+        // Login
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.login("standard_user", "secret_sauce");
 
-        driver.findElement(By.id("password"))
-                .sendKeys("secret_sauce");
-
-        driver.findElement(By.id("login-button"))
-                .click();
-
-        String title = driver.findElement(By.className("title"))
-                .getText();
-
-        System.out.println("Page title: " + title);
-
+        // getText
+        String title = driver.findElement(By.className("title")).getText();
         Assert.assertEquals(title, "Products");
 
-        Select sortDropdown = new Select(
+        // isSelected
+        Select sort = new Select(
                 driver.findElement(By.className("product_sort_container")));
 
-        sortDropdown.selectByValue("lohi");
+        sort.selectByValue("lohi");
 
-        WebElement selectedOption = driver.findElement(
-                By.cssSelector(
-                        "select.product_sort_container option[value='lohi']"));
+        WebElement selected = driver.findElement(
+                By.cssSelector("option[value='lohi']"));
 
-        Assert.assertTrue(selectedOption.isSelected());
+        Assert.assertTrue(selected.isSelected());
     }
 }
