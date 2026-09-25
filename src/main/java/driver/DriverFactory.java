@@ -1,17 +1,25 @@
 package driver;
 
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class DriverFactory {
 
-    public static WebDriver createDriver() {
+    private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
-        WebDriver driver = new ChromeDriver();
+    public static void initDriver() {
+        driver.set(new ChromeDriver());
+        getDriver().manage().window().maximize();
+    }
 
-        driver.manage().window().maximize();
+    public static WebDriver getDriver() {
+        return driver.get();
+    }
 
-        return driver;
+    public static void quitDriver() {
+        if (driver.get() != null) {
+            driver.get().quit();
+            driver.remove();
+        }
     }
 }

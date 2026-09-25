@@ -1,8 +1,7 @@
 package base;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import driver.DriverFactory;
@@ -11,18 +10,15 @@ public class BaseTest {
 
     protected WebDriver driver;
 
-    @BeforeClass
-    public void startBrowser() {
-        driver = DriverFactory.createDriver();
-    }
-
     @BeforeMethod
-    public void openApplication() {
+    public void setUp() {
+        DriverFactory.initDriver();
+        driver = DriverFactory.getDriver();
         driver.get("https://www.saucedemo.com/");
     }
 
-    @AfterClass
-    public void closeBrowser() {
-        driver.quit();
+    @AfterMethod
+    public void tearDown() {
+        DriverFactory.quitDriver();
     }
 }
